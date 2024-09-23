@@ -24,5 +24,5 @@ browserSync({
   files: ['public/**/*.{html,js,css}'],
   open: false,
   notify: false,
-  reloadDelay: 500
+  reloadDelay: 10
 });
