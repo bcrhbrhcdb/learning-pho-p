@@ -16,13 +16,14 @@ app.get('*', (req, res) => {
 // Start the server
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
-
-// Initialize Browser-Sync
-browserSync({
-  proxy: `localhost:${PORT}`,
-  files: ['public/**/*.{html,js,css}'],
-  open: false,
-  notify: false,
-  reloadDelay: 10
+  
+  // Initialize Browser-Sync after the server starts
+  browserSync({
+    proxy: `localhost:${PORT}`,
+    files: ['public/**/*.{html,js,css}'],
+    open: false,
+    notify: false,
+    reloadDelay: 10,
+    ignore: ['node_modules']
+  });
 });
