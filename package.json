@@ -1,9 +1,10 @@
 {
   "name": "learning-front-end",
   "version": "1.0.0",
-  "description": "php learning",
+  "description": "PHP learning project",
   "scripts": {
-    "start": "servor public --reload"
+    "start": "nodemon server.js",  
+    "dev": "nodemon server.js"      
   },
   "keywords": [
     "html",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/bcrhbrhcdb/learning-pho-p#readme",
   "devDependencies": {
-    "servor": "^4.0.2"
+    "express": "^4.17.1",  
+    "nodemon": "^2.0.15"    
   }
 }
